@@ -19,10 +19,33 @@ console.log(pathObj);
     name: 'app'
   } */
 
-  const os = require('os');
+ /*  const os = require('os');
 
   var freemem = os.freemem();
   var totalmem = os.totalmem();
 
   console.log(`Total memory : ${totalmem}`);
-  console.log(`Free memory : ${freemem}`);
+  console.log(`Free memory : ${freemem}`); */
+
+//const fs = require('fs');
+
+//asynchrone non bloquant. 
+
+//Majuscule pour dire que c'est une classe 
+const EventEmitter = require('events');
+
+//Emitter est un objet.
+// Class c'est comme le terme humain et l'objet est la personne. 
+
+
+const emitter = new EventEmitter();
+
+emitter.on('messageLogged', function(){
+    console.log('Listener called');
+});
+
+emitter.emit('messageLogged');
+
+//making a noise in the application, signaling an event.
+//Pour se faire entendre l'emit a besoin d'un listenner.  
+
