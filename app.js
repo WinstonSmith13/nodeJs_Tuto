@@ -1,6 +1,12 @@
 /* console.log(module); //global object
  */
 
-var logger = require('./logger');
+/* const log = require('./logger');
 
-logger.log('medy');
+log('medy');  */
+
+const path = require('path');
+
+var pathObj = path.parse(__filename);
+
+console.log(pathObj);
